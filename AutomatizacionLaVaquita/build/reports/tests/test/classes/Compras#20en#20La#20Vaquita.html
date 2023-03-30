@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Compras en La Vaquita</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Compras en La Vaquita</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Compras en La Vaquita</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">14.096s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Compra de productos"></a>
+<h3 class="failures">Compra de productos</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Invalid URL: &quot;https://vaquitaexpress.com.co/&quot;
+	at net.serenitybdd.core.pages.PageUrls.verified(PageUrls.java:80)
+	at net.serenitybdd.core.pages.PageUrls.getStartingUrl(PageUrls.java:56)
+	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:810)
+	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:799)
+	at net.serenitybdd.screenplay.actions.OpenPage.performAs(OpenPage.java:22)
+	at net.serenitybdd.screenplay.actions.OpenPage$ByteBuddy$CEfUMNQe.performAs$accessor$m3V9S4Gs(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at net.serenitybdd.screenplay.actions.OpenPage$ByteBuddy$CEfUMNQe.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
+	at com.sofkau.tasks.AbrirPaginaInicial.performAs(AbrirPaginaInicial.java:10)
+	at com.sofkau.tasks.AbrirPaginaInicial$ByteBuddy$sxLLrMgR.performAs$accessor$s7n66IpU(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at com.sofkau.tasks.AbrirPaginaInicial$ByteBuddy$sxLLrMgR.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
+	at net.serenitybdd.screenplay.Actor.wasAbleTo(Actor.java:162)
+	at com.sofkau.stepdefinitions.InicioSesionStepDefinitions.queElUsuarioEstaEnLaPaginaDeInicio(InicioSesionStepDefinitions.java:14)
+	at ✽.que el usuario esta en la pagina de inicio(file:///C:/Users/ivan0/Downloads/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:11)
+</pre>
+</span>
+<span class="code">
+<pre>io.cucumber.junit.UndefinedStepException: The step &quot;navega hasta la el formulario de inicio de sesion y completa los campos&quot; is undefined. You can implement it using the snippet(s) below:
+
+@Dado(&quot;navega hasta la el formulario de inicio de sesion y completa los campos&quot;)
+public void navegaHastaLaElFormularioDeInicioDeSesionYCompletaLosCampos() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Cuando(&quot;busca arandanos y selecciona frutas y verduras en la categoria&quot;)
+public void buscaArandanosYSeleccionaFrutasYVerdurasEnLaCategoria() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Cuando(&quot;selecciona uno de ellos, va al carrito y modifica su cantidad&quot;)
+public void seleccionaUnoDeEllosVaAlCarritoYModificaSuCantidad() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Cuando(&quot;continua con el proceso, llenando el formulario y da click en realizar pedido&quot;)
+public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
+public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</pre>
+</span>
+<span class="code">
+<pre>io.cucumber.junit.UndefinedStepException: The step &quot;busca arandanos y selecciona frutas y verduras en la categoria&quot; is undefined. You can implement it using the snippet(s) below:
+
+@Cuando(&quot;busca arandanos y selecciona frutas y verduras en la categoria&quot;)
+public void buscaArandanosYSeleccionaFrutasYVerdurasEnLaCategoria() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Cuando(&quot;selecciona uno de ellos, va al carrito y modifica su cantidad&quot;)
+public void seleccionaUnoDeEllosVaAlCarritoYModificaSuCantidad() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Cuando(&quot;continua con el proceso, llenando el formulario y da click en realizar pedido&quot;)
+public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
+public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</pre>
+</span>
+<span class="code">
+<pre>io.cucumber.junit.UndefinedStepException: The step &quot;selecciona uno de ellos, va al carrito y modifica su cantidad&quot; is undefined. You can implement it using the snippet(s) below:
+
+@Cuando(&quot;selecciona uno de ellos, va al carrito y modifica su cantidad&quot;)
+public void seleccionaUnoDeEllosVaAlCarritoYModificaSuCantidad() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Cuando(&quot;continua con el proceso, llenando el formulario y da click en realizar pedido&quot;)
+public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
+public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</pre>
+</span>
+<span class="code">
+<pre>io.cucumber.junit.UndefinedStepException: The step &quot;continua con el proceso, llenando el formulario y da click en realizar pedido&quot; is undefined. You can implement it using the snippet(s) below:
+
+@Cuando(&quot;continua con el proceso, llenando el formulario y da click en realizar pedido&quot;)
+public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
+public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</pre>
+</span>
+<span class="code">
+<pre>io.cucumber.junit.UndefinedStepException: The step &quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot; is undefined. You can implement it using the snippet(s) below:
+
+@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
+public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Compra de productos</td>
+<td class="failures">14.096s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 18934
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 30, 2023 10:08:15 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+mar. 30, 2023 10:08:15 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 42869
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 30, 2023 10:08:20 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 30/03/2023, 10:08:28 a. m.</p>
+</div>
+</div>
+</body>
+</html>

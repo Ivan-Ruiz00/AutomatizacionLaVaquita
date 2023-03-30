@@ -14,8 +14,7 @@ public class SeleccionarProductos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(OPCION_ANNADIR_AL_CARRITO,isClickable()),
-                Scroll.to(OPCION_ANNADIR_AL_CARRITO),
+                WaitUntil.the(OPCION_FRUTAS_Y_VERDURAS,isClickable()),
                 Click.on(OPCION_ANNADIR_AL_CARRITO),
                 Click.on(CARRITO),
                 WaitUntil.the(BOTON_MAS,isClickable())

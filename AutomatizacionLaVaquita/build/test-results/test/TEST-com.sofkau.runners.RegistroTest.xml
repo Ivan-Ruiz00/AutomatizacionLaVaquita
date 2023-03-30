@@ -7,13 +7,13 @@
 
 1 Scenarios (?[31m1 failed?[0m)
 6 Steps (?[31m1 failed?[0m, ?[33m1 undefined?[0m, ?[32m4 passed?[0m)
-0m29,629s
+0m47,344s
 
 
 org.opentest4j.AssertionFailedError
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:35)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:98)
-	at com.sofkau.stepdefinitions.CompraStepDefinition.continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido(CompraStepDefinition.java:52)
+	at com.sofkau.stepdefinitions.CompraStepDefinition.continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido(CompraStepDefinition.java:56)
 	at ?.continua con el proceso, llenando el formulario y da click en realizar pedido(file:///C:/Users/ivan0/Downloads/AutomatizacionVaquita/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:18)
 
 

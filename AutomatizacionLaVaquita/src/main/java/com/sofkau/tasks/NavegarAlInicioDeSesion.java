@@ -27,7 +27,9 @@ public class NavegarAlInicioDeSesion implements Task {
                 WaitUntil.the(CAMPO_CORREO,isVisible()),
                 Enter.theValue(propiedades.getProperty("serenity.username")).into(CAMPO_CORREO),
                 Enter.theValue(propiedades.getProperty("serenity.password")).into(CAMPO_CONTRASENNA),
-                Click.on(BOTON_INICIAR_SESION)
+                Click.on(BOTON_INICIAR_SESION),
+                WaitUntil.the(COOKIES,isVisible()),
+                Click.on(COOKIES)
         );
     }
     public static NavegarAlInicioDeSesion navegarAlInicioDeSesion() throws FileNotFoundException {

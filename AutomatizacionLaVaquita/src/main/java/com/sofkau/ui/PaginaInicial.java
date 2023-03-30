@@ -12,4 +12,6 @@ public class PaginaInicial extends PageObject {
             .located(By.xpath("(//input[@id='pass'])"));
     public static final Target BOTON_INICIAR_SESION= Target.the("boton para iniciar sesion")
             .located(By.xpath("(//button[@id='send2'])[1]"));
+    public static final Target COOKIES=Target.the("Boton cookies")
+            .located(By.xpath("(//button[@id='btn-cookie-allow'])"));
 }

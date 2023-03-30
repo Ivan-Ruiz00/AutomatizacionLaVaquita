@@ -4,12 +4,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static com.sofkau.ui.PaginaInicial.BOTON_PRODUCTOS;
 public class NavegarALosProductos implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BOTON_PRODUCTOS)
+                Click.on()
         );
     }
     public static NavegarALosProductos navegarALosProductos(){

@@ -2,65 +2,15 @@
 <testsuite name="com.sofkau.runners.RegistroTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="LAPTOP-87LGHN0U" time="0.0">
   <properties/>
   <system-out><![CDATA[
-?[31mFailed scenarios:?[0m
-?[31mfile:///C:/Users/ivan0/Downloads/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:16?[0m# Compra de productos
+?[33mUndefined scenarios:?[0m
+?[33mfile:///C:/Users/ivan0/Downloads/AutomatizacionVaquita/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:16?[0m# Compra de productos
 
-1 Scenarios (?[31m1 failed?[0m)
-6 Steps (?[31m1 failed?[0m, ?[33m5 undefined?[0m)
-0m14,683s
-
-
-java.lang.AssertionError: Invalid URL: "https://vaquitaexpress.com.co/"
-	at net.serenitybdd.core.pages.PageUrls.verified(PageUrls.java:80)
-	at net.serenitybdd.core.pages.PageUrls.getStartingUrl(PageUrls.java:56)
-	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:810)
-	at net.serenitybdd.core.pages.PageObject.open(PageObject.java:799)
-	at net.serenitybdd.screenplay.actions.OpenPage.performAs(OpenPage.java:22)
-	at net.serenitybdd.screenplay.actions.OpenPage$ByteBuddy$CEfUMNQe.performAs$accessor$m3V9S4Gs(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.actions.OpenPage$ByteBuddy$CEfUMNQe.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at com.sofkau.tasks.AbrirPaginaInicial.performAs(AbrirPaginaInicial.java:10)
-	at com.sofkau.tasks.AbrirPaginaInicial$ByteBuddy$sxLLrMgR.performAs$accessor$s7n66IpU(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:488)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:468)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:441)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:197)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:184)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:77)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at com.sofkau.tasks.AbrirPaginaInicial$ByteBuddy$sxLLrMgR.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:248)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:229)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:175)
-	at net.serenitybdd.screenplay.Actor.wasAbleTo(Actor.java:162)
-	at com.sofkau.stepdefinitions.InicioSesionStepDefinitions.queElUsuarioEstaEnLaPaginaDeInicio(InicioSesionStepDefinitions.java:14)
-	at ?.que el usuario esta en la pagina de inicio(file:///C:/Users/ivan0/Downloads/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:11)
+1 Scenarios (?[33m1 undefined?[0m)
+6 Steps (?[33m4 undefined?[0m, ?[32m2 passed?[0m)
+0m19,017s
 
 
 You can implement missing steps with the snippets below:
-
-@Dado("navega hasta la el formulario de inicio de sesion y completa los campos")
-public void navegaHastaLaElFormularioDeInicioDeSesionYCompletaLosCampos() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
 
 @Cuando("busca arandanos y selecciona frutas y verduras en la categoria")
 public void buscaArandanosYSeleccionaFrutasYVerdurasEnLaCategoria() {

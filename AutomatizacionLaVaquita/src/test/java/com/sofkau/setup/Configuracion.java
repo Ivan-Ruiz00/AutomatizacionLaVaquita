@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.thucydides.core.annotations.Managed;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,7 +25,7 @@ public class Configuracion {
     protected WebDriver webDriver;
 
 
-    private void setupUser( WebDriver webDriver) {
+    private void setupUser() {
         configurarDriver();
         OnStage.setTheStage(new OnlineCast());
         theActorCalled(ACTOR).can(BrowseTheWeb.with(webDriver));
@@ -48,17 +49,16 @@ public class Configuracion {
     }
 
     protected void configurarNavegador() {
-        setupUser(webDriver);
+        setupUser();
         setUplog4j();
     }
 
     private void setUplog4j() {
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }
-
-    public static void waitExplicit() {
+    public static void waitExplicit(String locator) {
         WebDriverWait wait = new WebDriverWait(getDriver(), DIEZ_SEGUNDOS);
-        wait.until(ExpectedConditions.alertIsPresent());
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     }
 
 

@@ -36,12 +36,12 @@ public class IngresoTarjeta implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue(nombre).into(CAMPO_NOMBRE),
-                Enter.theValue(numeroTarjeta).into(CAMPO_TARJETA),
-                Enter.theValue(cvc).into(CAMPO_CVC),
-                Enter.theValue(expiration).into(CAMPO_EXPIRATION),
-                Enter.theValue(expirationanno).into(CAMPO_EXPIRATIONANNO),
-                Click.on(BOTON_PAY)
+                Enter.theValue(nombre).into(),
+                Enter.theValue(numeroTarjeta).into(),
+                Enter.theValue(cvc).into(),
+                Enter.theValue(expiration).into(),
+                Enter.theValue(expirationanno).into(),
+                Click.on()
         );
     }
     public static IngresoTarjeta ingresoTarjeta(){

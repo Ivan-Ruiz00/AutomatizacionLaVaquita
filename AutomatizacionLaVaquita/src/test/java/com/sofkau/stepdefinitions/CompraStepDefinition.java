@@ -5,11 +5,15 @@ import io.cucumber.java.es.Entonces;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
+import static com.sofkau.questions.MensajeCompra.mensajeCompra;
+import static com.sofkau.questions.MensajeCorreo.mensajeCorreo;
 import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
 import static com.sofkau.tasks.NavegarALosProductos.navegarALosProductos;
 import static com.sofkau.tasks.SeleccionarCategoria.seleccionarCategoria;
 import static com.sofkau.tasks.SeleccionarProductos.seleccionarProductos;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class CompraStepDefinition extends Configuracion {
     public static Logger LOGGER = Logger.getLogger(CompraStepDefinition.class);
@@ -17,7 +21,7 @@ public class CompraStepDefinition extends Configuracion {
     public void buscaArandanosYSeleccionaFrutasYVerdurasEnLaCategoria() {
         try{
             theActorInTheSpotlight().attemptsTo(
-                    navegarALosProductos().buscaElProducto("arandanos"),
+                    navegarALosProductos().buscaElProducto("uva"),
                     seleccionarCategoria()
             );
         }catch (Exception e){
@@ -55,6 +59,17 @@ public class CompraStepDefinition extends Configuracion {
     }
     @Entonces("sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email")
     public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
-
+        try {
+            theActorInTheSpotlight().should(
+                    seeThat(mensajeCompra(), equalTo("Gracias por su compra!")),
+                    seeThat(mensajeCorreo(),equalTo("Te enviaremos un email de confirmación con los detalles y información del envío."))
+            );
+        }catch (Exception e){
+            LOGGER.info("fallo el proceso de finalizacion de la compra");
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+        }finally {
+            quitarDriver();
+        }
     }
 }

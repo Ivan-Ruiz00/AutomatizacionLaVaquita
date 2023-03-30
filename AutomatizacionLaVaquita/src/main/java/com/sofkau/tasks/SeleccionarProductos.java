@@ -23,7 +23,7 @@ public class SeleccionarProductos implements Task {
         extracted(actor);
     }
     private <T extends Actor> void extracted(T actor) {
-        for (int i=0;i<3;i++){
+        for (int i=0;i<7;i++){
             actor.attemptsTo(
                     Click.on(BOTON_MAS)
             );

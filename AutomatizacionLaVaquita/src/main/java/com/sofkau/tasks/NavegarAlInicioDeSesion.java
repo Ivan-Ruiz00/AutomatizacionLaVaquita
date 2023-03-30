@@ -30,7 +30,7 @@ public class NavegarAlInicioDeSesion implements Task {
     }
     public Properties carga() throws IOException{
         Properties propiedades = new Properties();
-        FileInputStream archivo = new FileInputStream("C:\\Users\\ivan0\\Downloads\\AutomatizacionVaquita\\AutomatizacionLaVaquita\\AutomatizacionLaVaquita\\src\\test\\resources\\serenity.properties");
+        FileInputStream archivo = new FileInputStream("src\\test\\resources\\serenity.properties");
         propiedades.load(archivo);
         return propiedades;
     }

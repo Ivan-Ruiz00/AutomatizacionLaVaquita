@@ -3,10 +3,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Managed;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -56,10 +58,4 @@ public class Configuracion {
     private void setUplog4j() {
         PropertyConfigurator.configure(USER_DIR.value() + LOG4J_PROPERTIES_FILE_PATH.getValue());
     }
-    public static void waitExplicit(String locator) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), DIEZ_SEGUNDOS);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
-    }
-
-
 }

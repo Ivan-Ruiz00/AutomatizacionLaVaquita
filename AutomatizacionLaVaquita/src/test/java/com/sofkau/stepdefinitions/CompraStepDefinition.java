@@ -2,55 +2,59 @@ package com.sofkau.stepdefinitions;
 import com.sofkau.setup.Configuracion;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Entonces;
+import org.apache.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
-import static com.sofkau.tasks.IngresoTarjeta.ingresoTarjeta;
-import static com.sofkau.tasks.NavegarALaMarca.navegarALaMarca;
 import static com.sofkau.tasks.NavegarALosProductos.navegarALosProductos;
-import static com.sofkau.tasks.NavegarAlCarrito.navegarAlCarrito;
-import static com.sofkau.tasks.NavegarAlPago.navegarAlPago;
-import static com.sofkau.tasks.Refrescar.thePage;
+import static com.sofkau.tasks.SeleccionarCategoria.seleccionarCategoria;
 import static com.sofkau.tasks.SeleccionarProductos.seleccionarProductos;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 public class CompraStepDefinition extends Configuracion {
-    @Cuando("navega hasta los productos y selecciona una marca")
-    public void navegaHastaLosProductosYSeleccionaUnaMarca(){
-        theActorInTheSpotlight().attemptsTo(
-                navegarALosProductos(),
-                thePage(),
-                navegarALaMarca()
-        );
+    public static Logger LOGGER = Logger.getLogger(CompraStepDefinition.class);
+    @Cuando("busca arandanos y selecciona frutas y verduras en la categoria")
+    public void buscaArandanosYSeleccionaFrutasYVerdurasEnLaCategoria() {
+        try{
+            theActorInTheSpotlight().attemptsTo(
+                    navegarALosProductos().buscaElProducto("arandanos"),
+                    seleccionarCategoria()
+            );
+        }catch (Exception e){
+            LOGGER.info("fallo el proceso de busqueda y seleccion de categoria");
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+            quitarDriver();
+        }
     }
-    @Cuando("selecciona tres de ellos")
-    public void seleccionaTresDeEllos() {
-        theActorInTheSpotlight().attemptsTo(
-                seleccionarProductos()
-        );
+    @Cuando("selecciona uno de ellos, va al carrito y modifica su cantidad")
+    public void seleccionaUnoDeEllosVaAlCarritoYModificaSuCantidad() {
+        try{
+            theActorInTheSpotlight().attemptsTo(
+                    seleccionarProductos()
+            );
+        }catch (Exception e){
+            LOGGER.info("fallo el proceso de seleccion de productos y modificacion de cantidades");
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+            quitarDriver();
+        }
     }
-    @Cuando("va al carrito de compras y hace el proceso de checkout")
-    public void vaAlCarritoDeComprasYHaceElProcesoDeCheckout() {
-        theActorInTheSpotlight().attemptsTo(
-                navegarAlCarrito(),
-                navegarAlPago(),
-                finalizarCompra(),
-                ingresoTarjeta().conNombre("Juan Pineda")
-                        .conNumeroTarjeta("123456783")
-                        .conCvc("311")
-                        .conExpiration("09")
-                        .yConExpirationAnno("2027")
-        );
+    @Cuando("continua con el proceso, llenando el formulario y da click en realizar pedido")
+    public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
+        try{
+            theActorInTheSpotlight().attemptsTo(
+                    finalizarCompra()
+            );
+        }catch (Exception e){
+            LOGGER.info("fallo el proceso de finalizacion de la compra");
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+            quitarDriver();
+        }
     }
-    /*
-    @Entonces("se le indica al usuario que se hizo su orden")
-    public void seLeIndicaAlUsuarioQueSeHizoSuOrden() {
-        theActorInTheSpotlight().should(
-                seeThat(mensajeCompra(), equalTo("ORDER PLACED!"))
-        );
-        quitarDriver();
-    }
+    @Entonces("sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email")
+    public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
 
-     */
+    }
 }

@@ -5,15 +5,13 @@ import io.cucumber.java.es.Dado;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
-import static com.sofkau.ui.PaginaInicial.BOTON_INICIO_SESION;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static com.sofkau.tasks.NavegarAlInicioDeSesion.navegarAlInicioDeSesion;
 
 public class InicioSesionStepDefinitions extends Configuracion {
     public static Logger LOGGER = Logger.getLogger(InicioSesionStepDefinitions.class);
     @Dado("que el usuario esta en la pagina de inicio")
-    public void queElUsuarioEstaEnLaPaginaDeInicio() throws InterruptedException {
+    public void queElUsuarioEstaEnLaPaginaDeInicio(){
         try {
             configurarNavegador();
             theActorInTheSpotlight().wasAbleTo(

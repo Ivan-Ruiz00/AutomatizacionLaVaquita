@@ -9,10 +9,8 @@ public class FinalizarCompra extends PageObject {
             .located(By.xpath("(//button[@id='top-cart-btn-checkout'])"));
     public static final Target BOTON_TRAMITAR_PEDIDO=Target.the("Boton tramitar pedido")
             .located(By.xpath("(//span[text()='Siguiente'])"));
-    public static final Target BOTON_SIGUIENTE=Target.the("Boton siguiente")
-            .located(By.xpath("(//span[text()='Siguiente'])"));
     public static final Target OPCION_EFECTIVO=Target.the("Opcion efectivo")
-            .located(By.xpath("(//input[@id='cashondelivery'])"));
+            .located(By.xpath("(//label[@for='cashondelivery'])"));
     public static final Target OPCION_FINALIZAR=Target.the("Reakizar pedido")
             .located(By.xpath("(//button[@class='action primary checkout'])[2]"));
 }

@@ -7,8 +7,11 @@ import org.junit.jupiter.api.Assertions;
 
 import static com.sofkau.questions.MensajeCompra.mensajeCompra;
 import static com.sofkau.questions.MensajeCorreo.mensajeCorreo;
+import static com.sofkau.tasks.FinalizarCarrito.finalizarCarrito;
 import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
+import static com.sofkau.tasks.MetodoDePago.metodoDePago;
 import static com.sofkau.tasks.NavegarALosProductos.navegarALosProductos;
+import static com.sofkau.tasks.PasarPasarellaDeDireccion.pasarPasarellaDeDireccion;
 import static com.sofkau.tasks.SeleccionarCategoria.seleccionarCategoria;
 import static com.sofkau.tasks.SeleccionarProductos.seleccionarProductos;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -48,6 +51,9 @@ public class CompraStepDefinition extends Configuracion {
     public void continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido() {
         try{
             theActorInTheSpotlight().attemptsTo(
+                    finalizarCarrito(),
+                    pasarPasarellaDeDireccion(),
+                    metodoDePago(),
                     finalizarCompra()
             );
         }catch (Exception e){
@@ -57,8 +63,8 @@ public class CompraStepDefinition extends Configuracion {
             quitarDriver();
         }
     }
-    @Entonces("sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email")
-    public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
+    @Entonces("sale un mensaje de gracias por su compra un numero de orden y un mensaje de envio por email")
+    public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvioPorEmail() {
         try {
             theActorInTheSpotlight().should(
                     seeThat(mensajeCompra(), equalTo("Gracias por su compra!")),

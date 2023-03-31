@@ -16,4 +16,4 @@ Característica: Compras en La Vaquita
   Escenario: Compra de productos
     Y selecciona uno de ellos, va al carrito y modifica su cantidad
     Y continua con el proceso, llenando el formulario y da click en realizar pedido
-    Entonces sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email
+    Entonces sale un mensaje de gracias por su compra un numero de orden y un mensaje de envio por email

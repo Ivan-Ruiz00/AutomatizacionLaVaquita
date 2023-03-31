@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Compras en La Vaquita" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-30T21:57:13" hostname="LAPTOP-87LGHN0U" time="46.782">
+<testsuite name="Compras en La Vaquita" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-31T02:00:31" hostname="LAPTOP-87LGHN0U" time="49.618">
   <properties/>
-  <testcase name="Compra de productos" classname="Compras en La Vaquita" time="46.782">
-    <failure message="org.opentest4j.AssertionFailedError" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError
-	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:35)
-	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:98)
-	at app//com.sofkau.stepdefinitions.CompraStepDefinition.continuaConElProcesoLlenandoElFormularioYDaClickEnRealizarPedido(CompraStepDefinition.java:56)
-	at ✽.continua con el proceso, llenando el formulario y da click en realizar pedido(file:///C:/Users/ivan0/Downloads/AutomatizacionVaquita/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:18)
-</failure>
-    <failure message="io.cucumber.junit.UndefinedStepException: The step &quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot; is undefined. You can implement it using the snippet(s) below:&#10;&#10;@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)&#10;public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step &quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot; is undefined. You can implement it using the snippet(s) below:
-
-@Entonces(&quot;sale un mensaje de gracias por su compra un numero de orden y un mensaje de envío por email&quot;)
-public void saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvíoPorEmail() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
+  <testcase name="Compra de productos" classname="Compras en La Vaquita" time="49.618">
+    <failure message="java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//p[text()='Te enviaremos un email de confirmaciÃ³n con los detalles y informaciÃ³n del envÃ­o.'])&quot;}&#10;  (Session info: chrome=111.0.5563.147)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'LAPTOP-87LGHN0U', ip: '192.168.0.5', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\ivan0\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 77c4834dbea0fe41cb4fc8dde55b5483&#10;*** Element info: {Using=xpath, value=(//p[text()='Te enviaremos un email de confirmaciÃ³n con los detalles y informaciÃ³n del envÃ­o.'])}" type="java.lang.AssertionError">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//p[text()='Te enviaremos un email de confirmaciÃ³n con los detalles y informaciÃ³n del envÃ­o.'])&quot;}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-87LGHN0U', ip: '192.168.0.5', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\ivan0\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 77c4834dbea0fe41cb4fc8dde55b5483
+*** Element info: {Using=xpath, value=(//p[text()='Te enviaremos un email de confirmaciÃ³n con los detalles y informaciÃ³n del envÃ­o.'])}
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.sofkau.stepdefinitions.CompraStepDefinition.saleUnMensajeDeGraciasPorSuCompraUnNumeroDeOrdenYUnMensajeDeEnvioPorEmail(CompraStepDefinition.java:69)
+	at ✽.sale un mensaje de gracias por su compra un numero de orden y un mensaje de envio por email(file:///C:/Users/ivan0/Downloads/AutomatizacionVaquita/AutomatizacionLaVaquita/AutomatizacionLaVaquita/src/test/resources/features/comprar.feature:19)
 </failure>
   </testcase>
-  <system-out><![CDATA[2023-03-30 16:57:57 INFO  CompraStepDefinition:54 fallo el proceso de finalizacion de la compra
-2023-03-30 16:57:57 WARN  CompraStepDefinition:55 element not interactable
-  (Session info: chrome=111.0.5563.147)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-87LGHN0U', ip: '192.168.0.37', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\ivan0\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61869}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 24d0f7f33cbc4fc1da97dbaf8cd334f0
-]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 39005
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 47976
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 30, 2023 4:57:16 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 30, 2023 9:00:34 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
